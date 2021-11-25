@@ -207,7 +207,7 @@ body{
   padding: 15px 10px 10px 10px;
   opacity: 1;
   height: auto;
-  max-height: 500px;
+  max-height: 1000px;
 }
 .accordionBtns{
   display: flex;
