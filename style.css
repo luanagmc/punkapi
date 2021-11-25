@@ -115,3 +115,97 @@ body{
 .info_text{
   float: right;
 }
+
+#beer_accordion{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin: 100px 0px;
+}
+.container{
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%;
+  padding-bottom: 5px;
+}
+.btn{
+  margin: 0;
+  position: relative;
+  padding: 10px 30px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #E0E0E0;
+  color: #000;
+  font-weight: bold;
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 3px 0px rgba(2,155,200,0.3);
+  -moz-box-shadow: 3px 3px 3px 0px rgba(2,155,200,0.3);
+  box-shadow: 3px 3px 3px 0px rgba(2,155,200,0.3);
+}
+
+.panel{
+  width: 100%; 
+  display: flex;
+  flex-wrap: wrap;      
+  color: #262626;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0px 10px;
+  background-color: #fff;
+}
+
+
+.panel{               
+  padding: 15px 10px 10px 10px;
+  opacity: 1;
+  max-height: 500px;              
+}
+
+.tagline{
+  font-weight: bold;
+}
+
+.panelImg{
+  display: flex;
+  flex-wrap: wrap;
+  width: 20%;
+  justify-content: center;
+}
+.panelImg img{
+  max-width: 100%;
+  margin: 0px auto;
+  max-height: 200px;
+  justify-content: center;
+}
+.panelTxt{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  justify-content: center;
+  flex-direction: column;
+}
+#beer_accordion .container .panel {
+  width: 100%;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0px 10px;
+}
+
+#beer_accordion .container.active .panel {
+  padding: 15px 10px 10px 10px;
+  opacity: 1;
+  height: auto;
+  max-height: 500px;
+}

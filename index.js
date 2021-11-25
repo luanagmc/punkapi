@@ -41,3 +41,50 @@ function beerGrid(){
 		mainContainer.append(div);
 	}
 }
+
+//Build a beer accordion with data returned from fetch
+function accordionData(){
+	console.log('Click worked')
+	var mainContainer = document.getElementById("beer_accordion");
+	
+	//create an accordion for each beer in the API
+	for (var i = 0; i < beerData.length; i++) {
+		var div = document.createElement("div");
+		div.classList.add('container');
+		div.innerHTML = 
+		'<p class="btn" id="'+beerData[i].name+'">'+beerData[i].name+'</p>'+
+		'<div class="panel"><div class="panelImg"><img src="'+ beerData[i].image_url+'" alt="'+ 
+		beerData[i].name+'"></div>'+'<div class="panelTxt">'+
+		'<p class="tagline">'+beerData[i].tagline+'</p><p> Description:<br>'
+		+beerData[i].description+'</p><p> First brewed:<br>'+beerData[i].first_brewed+'</div></div>';
+
+		mainContainer.append(div);
+	}
+}
+
+//toggle the accordion to display/hide panels
+function beerAccordion(elem, option){
+	document.addEventListener('click', function (e) {
+		//check the element that has been clicked
+		if (!e.target.matches(elem +' .btn')) return;
+		else{
+			//check if the clicked element already has active class
+			if(!e.target.parentElement.classList.contains('active')){
+				if(option==true){
+					//if it contains remove active from all others
+					var elementList = document.querySelectorAll(elem +' .container');
+					Array.prototype.forEach.call(elementList, function (e) {
+						e.classList.remove('active');
+					});
+				}
+				//add active class to target    
+				e.target.parentElement.classList.add('active');
+			}else{    
+				//remove active class from target
+				e.target.parentElement.classList.remove('active');
+			}
+		}
+	});
+}
+
+beerAccordion('#beer_accordion', true);
