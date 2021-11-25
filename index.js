@@ -14,6 +14,22 @@ fetchData();
 
 //show/hide content
 function showHide(){
+	//button to open all accordion elements		
+	var open = document.getElementById("open");
+	if (open.style.display === "none") {
+		open.style.display = "block";
+	} else {
+		open.style.display = "none";
+	}
+
+  	//button to close all accordion elements
+  	var close = document.getElementById("close");
+  	if (close.style.display === "none") {
+  		close.style.display = "block";
+  	} else {
+  		close.style.display = "none";
+  	}
+
 	//button that call functions
 	var print = document.getElementById('print');
 	if(print.style.display == 'none'){
@@ -65,6 +81,22 @@ function accordionData(){
 //toggle the accordion to display/hide panels
 function beerAccordion(elem, option){
 	document.addEventListener('click', function (e) {
+		// if open all button clicked
+		if(e.target.matches('.openall')){
+			var elementList = document.querySelectorAll(elem +' .container');
+					Array.prototype.forEach.call(elementList, function (e) {
+						e.classList.add('active');
+					});
+
+		}
+		//if close all button clicked 
+		if(e.target.matches('.closeall')){
+			var elementList = document.querySelectorAll(elem +' .container');
+					Array.prototype.forEach.call(elementList, function (e) {
+						e.classList.remove('active');
+					});
+
+		}
 		//check the element that has been clicked
 		if (!e.target.matches(elem +' .btn')) return;
 		else{
@@ -88,3 +120,7 @@ function beerAccordion(elem, option){
 }
 
 beerAccordion('#beer_accordion', true);
+
+function scrollToTop() {
+  window.scroll({top: 0, left: 0, behavior: 'smooth'});
+}

@@ -209,3 +209,46 @@ body{
   height: auto;
   max-height: 500px;
 }
+.accordionBtns{
+  display: flex;
+  flex-wrap:wrap;
+  align-items: center;
+  justify-content: center;
+}
+.accordionBtn{
+  background-color: #029BC8;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 20px;
+}
+#back-top {
+  position: fixed;
+  right: 30px;
+  bottom: 15px;
+  z-index: 1000;
+  display: none;
+  font-size: 25px;
+  color: #4D4D4D;
+  cursor: pointer;
+  opacity: 1; 
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+  .panelImg{
+    width: 100%;
+  }
+  .panelTxt{
+    width: 100%;
+    text-align: center;
+    margin: 0px 20px;
+  }
+  #back-top{
+    visibility: hidden;
+  }
+}

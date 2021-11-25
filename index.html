@@ -11,6 +11,9 @@
 </head>
 <body>
 	<div id="err"></div>
+	<div id="back-top" onclick="scrollToTop()">
+		<i class="fas fa-arrow-alt-circle-up"></i>
+	</div>
 
 	<div id="header">
 		<img src="brewdog.png" alt="BrewDog logo">
@@ -21,7 +24,12 @@
 	</div> 
 
 	<div id="beer_grid"></div>
-	<div id="beer_accordion"></div>
+	<div id="beer_accordion">
+		<div class="accordionBtns">
+			<button class="openall accordionBtn" id="open" style="display:none">Open All</button>
+			<button class="closeall accordionBtn" id="close" style="display:none">Close All</button>
+	</div>
+</div>
 
 </body>
 </html>
