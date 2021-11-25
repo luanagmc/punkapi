@@ -1,0 +1,75 @@
+body{
+  font-family: Futura,  Arial, sans-serif;
+  background-color: #000;
+  color: #000;
+}
+
+#beer_grid{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin: 50px 0px;
+}
+
+.product_holder{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 160px;
+  height: 220px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #E0E0E0;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-shadow: 3px 3px 3px 0px rgba(2,155,200,0.3);
+  -moz-box-shadow: 3px 3px 3px 0px rgba(2,155,200,0.3);
+  box-shadow: 3px 3px 3px 0px rgba(2,155,200,0.3);
+}
+
+.produc_holder:hover{
+  border: 1px solid #029BC8;
+  -webkit-box-shadow: 5px 5px 5px 2px rgba(2,155,200,0.5);
+  -moz-box-shadow: 5px 5px 5px 2px rgba(2,155,200,0.5);
+  box-shadow: 5px 5px 5px 2px rgba(2,155,200,0.5);
+}
+
+.imgwrap{
+  height: 50%;
+  width: 100%;
+  margin: 10px auto;
+}
+
+.imgwrap img{
+  display:  inline-block;
+  max-height: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.text_title{
+  width: 100%;
+  margin: auto 8px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.text_small{
+  font-size: 14px;
+  margin: 10px;
+  width: 80%;
+}
+
+.abv_text{
+  float: left;
+}
+
+.info_text{
+  float: right;
+}
